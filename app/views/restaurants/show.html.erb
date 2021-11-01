@@ -1,0 +1,15 @@
+<h1><%= @restaurant.name %></h1>
+
+<p><%= @restaurant.rating %></p>
+
+<p><%= @restaurant.address %></p>
+
+
+<%= link_to 'Delete',
+            restaurant_path(@restaurant),
+            method: :delete,
+            class: 'btn btn-danger',
+            data: { confirm: 'Are your sure ?' } %>
+
+
+<%= link_to 'Edit', edit_restaurant_path(@restaurant), class: 'btn btn-warning' %>
